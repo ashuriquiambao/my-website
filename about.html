@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKEDO | About</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f14;
+            color: white;
+        }
+
+        nav {
+            background: #15151d;
+            border-bottom: 1px solid #292936;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ff5fa2;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff5fa2;
+        }
+
+        .about {
+            min-height: 90vh;
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .title h1 {
+            font-size: 48px;
+            color: #ff5fa2;
+            margin-bottom: 15px;
+        }
+
+        .title p {
+            color: #aaa;
+        }
+
+        .box {
+            background: #171720;
+            border: 1px solid #2b2b38;
+            border-radius: 18px;
+            padding: 35px;
+            margin-bottom: 25px;
+        }
+
+        .box h2 {
+            color: #ff5fa2;
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #15151d;
+            color: #888;
+        }
+
+        @media (max-width: 700px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .title h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">NIKEDO</div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <section class="about">
+
+        <div class="container">
+
+            <div class="title">
+                <h1>About NIKEDO</h1>
+                <p>Learn more about our group and our purpose.</p>
+            </div>
+
+            <div class="box">
+                <h2>Who We Are</h2>
+
+                <p>
+                    NIKEDO is a student innovation group created to develop
+                    a practical and creative technology idea. Our goal is to
+                    explore how technology can help make everyday activities
+                    easier, safer, and more convenient.
+                </p>
+            </div>
+
+            <div class="box">
+                <h2>Our Purpose</h2>
+
+                <p>
+                    Our project aims to combine creativity and technology
+                    to create an innovative laptop concept. We want to show
+                    how simple automated features can improve the way people
+                    use technology in their daily lives.
+                </p>
+            </div>
+
+            <div class="box">
+                <h2>Why We Created NIKEDO</h2>
+
+                <p>
+                    We created NIKEDO as part of our student innovation
+                    project. Through this project, we can apply what we
+                    have learned in ICT while developing an idea that can
+                    potentially be improved and developed in the future.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        © 2026 NIKEDO | Student Innovation Project
+    </footer>
+
+</body>
+</html>
