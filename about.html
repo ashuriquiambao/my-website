@@ -24,113 +24,171 @@
             color: white;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             background: #15151d;
             border-bottom: 1px solid #292936;
             padding: 18px 8%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             position: sticky;
             top: 0;
             z-index: 10;
         }
 
+        /* CLICKABLE LOGO */
+
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
+
             color: #ff5fa2;
+
             font-size: 24px;
             font-weight: bold;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo:hover span {
+            color: #ff82b6;
         }
 
         .nav-logo {
             width: 42px;
             height: 42px;
+
             object-fit: contain;
+
             border-radius: 8px;
         }
 
+        /* NAVIGATION LINKS */
+
         nav a {
             color: white;
+
             text-decoration: none;
+
             margin-left: 25px;
+
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #ff5fa2;
         }
 
-        /* ABOUT HERO */
+        /* =========================
+           ABOUT HERO
+        ========================= */
 
         .hero {
             text-align: center;
+
             padding: 80px 20px 50px;
         }
 
         .hero h1 {
             color: #ff5fa2;
+
             font-size: 45px;
+
             margin-bottom: 15px;
         }
 
         .hero p {
             color: #ccc;
+
             max-width: 700px;
+
             margin: auto;
+
             line-height: 1.7;
+
             font-size: 18px;
         }
 
-        /* ABOUT SECTION */
+        /* =========================
+           ABOUT SECTION
+        ========================= */
 
         .section {
             max-width: 1000px;
+
             margin: 30px auto;
+
             padding: 20px;
         }
 
         .box {
             background: #15151d;
+
             padding: 30px;
+
             border-radius: 15px;
+
             margin-bottom: 25px;
+
             border: 1px solid #252530;
         }
 
         .box h2 {
             color: #ff5fa2;
+
             margin-bottom: 15px;
         }
 
         .box p {
             color: #ddd;
+
             line-height: 1.8;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             text-align: center;
+
             padding: 30px;
+
             color: #888;
+
             background: #15151d;
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
             nav {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav a {
                 margin-left: 8px;
+
                 margin-right: 8px;
             }
 
@@ -148,9 +206,11 @@
 <body>
 
 
-    <!-- CLICK SOUND -->
+    <!-- =========================
+         CLICK SOUND
+    ========================= -->
 
-    <audio id="nikedoSound">
+    <audio id="nikedoSound" preload="auto">
 
         <source src="Sound Click.mp3"
                 type="audio/mpeg">
@@ -158,11 +218,18 @@
     </audio>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
 
-        <div class="logo">
+
+        <!-- CLICKABLE NIKEDO LOGO -->
+
+        <a href="index.html"
+           class="logo"
+           onclick="playAndGo(event, 'index.html')">
 
             <img src="Nikedo.jpg"
                  alt="NIKEDO Logo"
@@ -170,29 +237,42 @@
 
             <span>NIKEDO</span>
 
-        </div>
+        </a>
 
+
+        <!-- NAVIGATION LINKS -->
 
         <div>
 
-            <a href="index.html"
-               onclick="playAndGo(event, 'index.html')">
+            <a href="welcome.html"
+               onclick="playAndGo(event, 'welcome.html')">
+
                 Home
+
             </a>
+
 
             <a href="about.html"
                onclick="playAndGo(event, 'about.html')">
+
                 About
+
             </a>
+
 
             <a href="members.html"
                onclick="playAndGo(event, 'members.html')">
+
                 Members
+
             </a>
+
 
             <a href="innovation.html"
                onclick="playAndGo(event, 'innovation.html')">
+
                 Innovation
+
             </a>
 
         </div>
@@ -200,11 +280,15 @@
     </nav>
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
-        <h1>About NIKEDO</h1>
+        <h1>
+            About NIKEDO
+        </h1>
 
         <p>
             NIKEDO is a student innovation project focused on creating
@@ -214,14 +298,20 @@
     </section>
 
 
-    <!-- ABOUT CONTENT -->
+    <!-- =========================
+         ABOUT CONTENT
+    ========================= -->
 
     <section class="section">
 
 
+        <!-- WHAT IS NIKEDO -->
+
         <div class="box">
 
-            <h2>💡 What is NIKEDO?</h2>
+            <h2>
+                💡 What is NIKEDO?
+            </h2>
 
             <p>
                 NIKEDO is an innovative student project that explores
@@ -234,9 +324,13 @@
         </div>
 
 
+        <!-- PURPOSE -->
+
         <div class="box">
 
-            <h2>🎯 Our Purpose</h2>
+            <h2>
+                🎯 Our Purpose
+            </h2>
 
             <p>
                 The purpose of NIKEDO is to develop a creative technology
@@ -249,9 +343,13 @@
         </div>
 
 
+        <!-- VISION -->
+
         <div class="box">
 
-            <h2>🚀 Our Vision</h2>
+            <h2>
+                🚀 Our Vision
+            </h2>
 
             <p>
                 Our vision is to create innovative ideas that can make
@@ -263,9 +361,13 @@
         </div>
 
 
+        <!-- WHY NIKEDO -->
+
         <div class="box">
 
-            <h2>✨ Why NIKEDO?</h2>
+            <h2>
+                ✨ Why NIKEDO?
+            </h2>
 
             <p>
                 NIKEDO was created to demonstrate how students can use
@@ -281,7 +383,9 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
@@ -290,11 +394,15 @@
     </footer>
 
 
-    <!-- SOUND SCRIPT -->
+    <!-- =========================
+         SOUND SCRIPT
+    ========================= -->
 
     <script>
 
-        function playSound() {
+        function playAndGo(event, page) {
+
+            event.preventDefault();
 
             const sound =
                 document.getElementById("nikedoSound");
@@ -303,25 +411,27 @@
 
             sound.currentTime = 0;
 
-            sound.play();
+            sound.play()
+
+                .then(() => {
+
+                    sound.onended = function() {
+
+                        window.location.href = page;
+
+                    };
+
+                })
+
+                .catch(error => {
+
+                    console.log("Sound error:", error);
+
+                    window.location.href = page;
+
+                });
 
         }
-
-
-        ffunction playAndGo(event, page) {
-    event.preventDefault();
-
-    const sound = document.getElementById("nikedoSound");
-
-    sound.volume = 0.35;
-    sound.currentTime = 0;
-
-    sound.play();
-
-    sound.onended = function() {
-        window.location.href = page;
-    };
-}
 
     </script>
 
