@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKEDO | Members</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f14;
+            color: white;
+        }
+
+        header {
+            background: #15151d;
+            border-bottom: 1px solid #292936;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ff5fa2;
+            font-size: 25px;
+            letter-spacing: 3px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #ff5fa2;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .title {
+            text-align: center;
+            color: #ff5fa2;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            text-align: center;
+            color: #cfcfcf;
+            margin-bottom: 50px;
+        }
+
+        .members {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .member-card {
+            background: #171720;
+            border: 1px solid #292936;
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .member-card:hover {
+            transform: translateY(-7px);
+            border-color: #ff5fa2;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border: 2px dashed #ff5fa2;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff8abb;
+            background: #111118;
+        }
+
+        .member-card h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .position {
+            color: #ff5fa2;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .profile-btn {
+            display: inline-block;
+            padding: 10px 22px;
+            background: #ff5fa2;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .profile-btn:hover {
+            background: #ff78b1;
+        }
+
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 45px auto 0;
+            color: #ff5fa2;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #15151d;
+            color: #aaa;
+        }
+
+        footer strong {
+            color: #ff5fa2;
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .members {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <h1 class="logo">NIKEDO</h1>
+
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main class="page">
+
+        <h1 class="title">
+            NIKEDO Members
+        </h1>
+
+        <p class="description">
+            Meet the students behind the NIKEDO innovation project.
+            Click a member to learn more about them.
+        </p>
+
+
+        <div class="members">
+
+            <!-- MARK ASHLEY -->
+            <div class="member-card">
+
+                <div class="photo">
+                    Picture
+                </div>
+
+                <h2>
+                    Mark Ashley A. Quiambao
+                </h2>
+
+                <div class="position">
+                    Leader
+                </div>
+
+                <a href="mark-ashley.html" class="profile-btn">
+                    View Profile
+                </a>
+
+            </div>
+
+
+            <!-- GILLIAN -->
+            <div class="member-card">
+
+                <div class="photo">
+                    Picture
+                </div>
+
+                <h2>
+                    Gillian Kate L. Lomibao
+                </h2>
+
+                <div class="position">
+                    Member
+                </div>
+
+                <a href="gillian.html" class="profile-btn">
+                    View Profile
+                </a>
+
+            </div>
+
+
+            <!-- MARK ANGELO -->
+            <div class="member-card">
+
+                <div class="photo">
+                    Picture
+                </div>
+
+                <h2>
+                    Mark Angelo Tibar
+                </h2>
+
+                <div class="position">
+                    Member
+                </div>
+
+                <a href="mark-angelo.html" class="profile-btn">
+                    View Profile
+                </a>
+
+            </div>
+
+
+            <!-- MARIA SUZAINE -->
+            <div class="member-card">
+
+                <div class="photo">
+                    Picture
+                </div>
+
+                <h2>
+                    Maria Suzaine P. Catingcoy
+                </h2>
+
+                <div class="position">
+                    Member
+                </div>
+
+                <a href="maria.html" class="profile-btn">
+                    View Profile
+                </a>
+
+            </div>
+
+
+            <!-- AKIH -->
+            <div class="member-card">
+
+                <div class="photo">
+                    Picture
+                </div>
+
+                <h2>
+                    Akih Madija
+                </h2>
+
+                <div class="position">
+                    Member
+                </div>
+
+                <a href="akih.html" class="profile-btn">
+                    View Profile
+                </a>
+
+            </div>
+
+
+            <!-- 6TH MEMBER -->
+            <div class="member-card">
+
+                <div class="photo">
+                    Picture
+                </div>
+
+                <h2>
+                    6th Member
+                </h2>
+
+                <div class="position">
+                    Member
+                </div>
+
+                <a href="member6.html" class="profile-btn">
+                    View Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <a href="index.html#home" class="back">
+            ← Back to Home
+        </a>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 <strong>NIKEDO</strong> | Innovation Project
+        </p>
+
+    </footer>
+
+</body>
+</html>
