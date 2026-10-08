@@ -36,9 +36,19 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             color: #ff5fa2;
             font-size: 25px;
             font-weight: bold;
+        }
+
+        .nav-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 8px;
         }
 
         .nav-links {
@@ -191,7 +201,10 @@
     <nav>
         <div class="nav-container">
 
-            <div class="logo">NIKEDO</div>
+            <div class="logo">
+                <img src="Nikedo.jpg" alt="NIKEDO Logo" class="nav-logo">
+                <span>NIKEDO</span>
+            </div>
 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -316,4 +329,3 @@
 
 </body>
 </html>
-```
