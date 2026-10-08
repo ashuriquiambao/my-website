@@ -4,82 +4,31 @@
     <meta name="google-site-verification" content="Lh6oC2e0P2LRy7hEgezL4QDNInbt_4i14-yh--l_Jy0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIKEDO | Home</title>
+    <title>NIKEDO | Welcome</title>
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, sans-serif;
             background: #0f0f14;
             color: white;
+            min-height: 100vh;
+            overflow: hidden;
         }
-
-        /* NAVIGATION */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(21, 21, 29, 0.95);
-            border-bottom: 1px solid #292936;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 15px 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #ff5fa2;
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        .nav-logo {
-            width: 42px;
-            height: 42px;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ff5fa2;
-        }
-
-        /* WELCOME / LANDING PAGE */
 
         .welcome {
             min-height: 100vh;
             position: relative;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             text-align: center;
             padding: 40px 25px;
             overflow: hidden;
@@ -96,19 +45,20 @@
         .welcome::before {
             content: "";
             position: absolute;
+
             width: 500px;
             height: 500px;
+
             background: #ff5fa2;
             opacity: 0.08;
+
             border-radius: 50%;
             filter: blur(100px);
+
             top: 15%;
             left: 50%;
-            transform: translateX(-50%);
-        }
 
-        .welcome::after {
-            display: none;
+            transform: translateX(-50%);
         }
 
         .welcome-content {
@@ -117,11 +67,10 @@
             max-width: 800px;
         }
 
-        /* LOGO + CIRCLE */
-
         .logo-wrapper {
             width: 230px;
             height: 230px;
+
             margin: 0 auto 30px;
 
             position: relative;
@@ -172,8 +121,6 @@
             z-index: 1;
         }
 
-        /* LOGO MOVEMENT */
-
         @keyframes logoFloat {
             0%, 100% {
                 transform: translateY(0);
@@ -183,19 +130,6 @@
                 transform: translateY(-8px);
             }
         }
-
-        /* SMALL LABEL */
-
-        .welcome-label {
-            color: #ff82b6;
-            font-size: 13px;
-            letter-spacing: 4px;
-            font-weight: bold;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-
-        /* MAIN TITLE */
 
         .welcome h1 {
             font-size: 52px;
@@ -212,24 +146,26 @@
         .welcome p {
             max-width: 650px;
             margin: 0 auto 35px;
+
             color: #cccccc;
             line-height: 1.8;
             font-size: 17px;
         }
 
-        /* ENTER BUTTON */
-
         .enter-btn {
             display: inline-flex;
             align-items: center;
             gap: 12px;
+
             padding: 15px 30px;
 
             background: #ff5fa2;
             color: white;
+
             text-decoration: none;
 
             border-radius: 30px;
+
             font-weight: bold;
             font-size: 15px;
 
@@ -240,8 +176,11 @@
 
         .enter-btn:hover {
             background: #ff82b6;
+
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(255, 95, 162, 0.35);
+
+            box-shadow:
+                0 12px 30px rgba(255, 95, 162, 0.35);
         }
 
         .arrow {
@@ -253,97 +192,7 @@
             transform: translateX(5px);
         }
 
-        /* SCROLL TEXT */
-
-        .scroll-text {
-            margin-top: 45px;
-            color: #777;
-            font-size: 12px;
-            letter-spacing: 2px;
-            animation: scrollFloat 2s ease-in-out infinite;
-        }
-
-        @keyframes scrollFloat {
-            0%, 100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(5px);
-            }
-        }
-
-        /* HOME */
-
-        .home {
-            min-height: 90vh;
-            padding: 100px 25px;
-        }
-
-        .home-container {
-            max-width: 1000px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .home h1 {
-            font-size: 45px;
-            color: #ff5fa2;
-            margin-bottom: 20px;
-        }
-
-        .home h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .home p {
-            max-width: 750px;
-            margin: 0 auto 25px;
-            color: #cccccc;
-            line-height: 1.8;
-        }
-
-        .highlight {
-            margin-top: 50px;
-            padding: 35px;
-            background: #171720;
-            border: 1px solid #2b2b38;
-            border-radius: 18px;
-        }
-
-        .highlight h3 {
-            color: #ff5fa2;
-            margin-bottom: 15px;
-            font-size: 25px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #15151d;
-            color: #888;
-            font-size: 14px;
-        }
-
-        /* MOBILE */
-
         @media (max-width: 700px) {
-
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-links {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .welcome {
-                min-height: 100vh;
-            }
 
             .logo-wrapper {
                 width: 170px;
@@ -361,11 +210,6 @@
                 height: 170px;
             }
 
-            .welcome-label {
-                font-size: 11px;
-                letter-spacing: 3px;
-            }
-
             .welcome h1 {
                 font-size: 35px;
             }
@@ -373,28 +217,22 @@
             .welcome p {
                 font-size: 15px;
             }
-
-            .home h1 {
-                font-size: 35px;
-            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- BACKGROUND MUSIC -->
-    <audio id="nikedoSound">
+    <!-- CLICK SOUND -->
+    <audio id="nikedoSound" preload="auto">
         <source src="Sound Click.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- WELCOME / LANDING PAGE -->
+    <!-- OPENING PAGE -->
 
     <section class="welcome">
 
         <div class="welcome-content">
-
-            <!-- LOGO + CIRCLE -->
 
             <div class="logo-wrapper">
 
@@ -402,10 +240,6 @@
                      alt="NIKEDO Logo"
                      class="welcome-logo">
 
-            </div>
-
-            <div class="welcome-label">
-                
             </div>
 
             <h1>
@@ -419,146 +253,48 @@
                 for everyday life.
             </p>
 
-            <!-- EXPLORE BUTTON WITH SOUND -->
-
-            <a href="#home"
+            <a href="welcome.html"
                class="enter-btn"
-               onclick="playSound()">
+               onclick="playAndGo(event, 'welcome.html')">
 
                 EXPLORE NIKEDO
+
                 <span class="arrow">→</span>
 
             </a>
 
-            <div class="scroll-text">
-                SCROLL TO EXPLORE ↓
-            </div>
-
         </div>
 
     </section>
-
-    <!-- NAVIGATION -->
-
-    <nav>
-
-        <div class="nav-container">
-
-            <div class="logo">
-
-                <img src="Nikedo.jpg"
-                     alt="NIKEDO Logo"
-                     class="nav-logo">
-
-                <span>NIKEDO</span>
-
-            </div>
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="index.html"
-                       onclick="playAndGo(event, 'index.html')">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html"
-                       onclick="playAndGo(event, 'about.html')">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="members.html"
-                       onclick="playAndGo(event, 'members.html')">
-                        Members
-                    </a>
-                </li>
-
-                <li>
-                    <a href="innovation.html"
-                       onclick="playAndGo(event, 'innovation.html')">
-                        Innovation
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </nav>
-
-    <!-- HOME PAGE -->
-
-    <section class="home" id="home">
-
-        <div class="home-container">
-
-            <h1>Welcome to NIKEDO</h1>
-
-            <h2>Smart Ideas for Everyday Technology</h2>
-
-            <p>
-                NIKEDO is a student innovation project created to explore
-                how technology can make everyday tasks easier, smarter,
-                and more convenient.
-            </p>
-
-            <p>
-                Our project focuses on developing a future laptop concept
-                that can automatically close when the user is no longer
-                detected in front of it.
-            </p>
-
-            <div class="highlight">
-
-                <h3>Our Main Idea</h3>
-
-                <p>
-                    A laptop equipped with a camera or sensor can detect
-                    whether the user is still present. If the user leaves
-                    for one minute, the laptop can automatically close
-                    itself.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <footer>
-        © 2026 NIKEDO | Student Innovation Project
-    </footer>
-
-    <!-- SOUND SCRIPT -->
 
     <script>
-        function playSound() {
+
+        function playAndGo(event, page) {
+
+            event.preventDefault();
+
             const sound = document.getElementById("nikedoSound");
 
             sound.volume = 0.35;
             sound.currentTime = 0;
 
-            sound.play();
+            sound.play()
+                .then(() => {
+
+                    sound.onended = function() {
+                        window.location.href = page;
+                    };
+
+                })
+                .catch((error) => {
+
+                    console.log("Sound error:", error);
+
+                    window.location.href = page;
+
+                });
         }
 
-        function playAndGo(event, page) {
-    event.preventDefault();
-
-    const sound = document.getElementById("nikedoSound");
-
-    sound.volume = 0.35;
-    sound.currentTime = 0;
-
-    sound.play();
-
-    sound.onended = function() {
-        window.location.href = page;
-    };
-}
     </script>
 
 </body>
