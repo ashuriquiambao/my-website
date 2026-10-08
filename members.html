@@ -199,7 +199,7 @@
 <body>
 
     <!-- SOUND -->
-    <audio id="nikedoSound">
+    <audio id="nikedoSound" preload="auto">
         <source src="Sound Click.mp3" type="audio/mpeg">
     </audio>
 
@@ -214,25 +214,29 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html" onclick="playAndGo(event, 'index.html')">
+                    <a href="index.html"
+                       onclick="playAndGo(event, 'index.html')">
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a href="about.html" onclick="playAndGo(event, 'about.html')">
+                    <a href="about.html"
+                       onclick="playAndGo(event, 'about.html')">
                         About
                     </a>
                 </li>
 
                 <li>
-                    <a href="members.html" onclick="playAndGo(event, 'members.html')">
+                    <a href="members.html"
+                       onclick="playAndGo(event, 'members.html')">
                         Members
                     </a>
                 </li>
 
                 <li>
-                    <a href="innovation.html" onclick="playAndGo(event, 'innovation.html')">
+                    <a href="innovation.html"
+                       onclick="playAndGo(event, 'innovation.html')">
                         Innovation
                     </a>
                 </li>
@@ -256,7 +260,9 @@
             <!-- MEMBER 1 -->
             <div class="member-card">
 
-                <img src="mark-ashley.jpg" alt="Mark Ashley A. Quiambao" class="picture">
+                <img src="mark-ashley.jpg"
+                     alt="Mark Ashley A. Quiambao"
+                     class="picture">
 
                 <h2>Mark Ashley A. Quiambao</h2>
 
@@ -264,7 +270,9 @@
                     Inventor
                 </div>
 
-                <a href="mark-ashley.html" class="profile-btn">
+                <a href="mark-ashley.html"
+                   class="profile-btn"
+                   onclick="playAndGo(event, 'mark-ashley.html')">
                     View Profile
                 </a>
 
@@ -274,7 +282,9 @@
             <!-- MEMBER 2 -->
             <div class="member-card">
 
-                <img src="gillian.jpg" alt="Gillian Kate L. Lomibao" class="picture">
+                <img src="gillian.jpg"
+                     alt="Gillian Kate L. Lomibao"
+                     class="picture">
 
                 <h2>Gillian Kate L. Lomibao</h2>
 
@@ -282,7 +292,9 @@
                     Leader
                 </div>
 
-                <a href="gillian.html" class="profile-btn">
+                <a href="gillian.html"
+                   class="profile-btn"
+                   onclick="playAndGo(event, 'gillian.html')">
                     View Profile
                 </a>
 
@@ -292,7 +304,9 @@
             <!-- MEMBER 3 -->
             <div class="member-card">
 
-                <img src="mark-angelo.jpg" alt="Mark Angelo Tibar" class="picture">
+                <img src="mark-angelo.jpg"
+                     alt="Mark Angelo Tibar"
+                     class="picture">
 
                 <h2>Mark Angelo Tibar</h2>
 
@@ -300,7 +314,9 @@
                     Member
                 </div>
 
-                <a href="mark-angelo.html" class="profile-btn">
+                <a href="mark-angelo.html"
+                   class="profile-btn"
+                   onclick="playAndGo(event, 'mark-angelo.html')">
                     View Profile
                 </a>
 
@@ -320,7 +336,9 @@
                     Member
                 </div>
 
-                <a href="maria.html" class="profile-btn">
+                <a href="maria.html"
+                   class="profile-btn"
+                   onclick="playAndGo(event, 'maria.html')">
                     View Profile
                 </a>
 
@@ -330,7 +348,9 @@
             <!-- MEMBER 5 -->
             <div class="member-card">
 
-                <img src="akih.jpg" alt="Akih Madija" class="picture">
+                <img src="akih.jpg"
+                     alt="Akih Madija"
+                     class="picture">
 
                 <h2>Akih Madija</h2>
 
@@ -338,7 +358,9 @@
                     Member
                 </div>
 
-                <a href="akih.html" class="profile-btn">
+                <a href="akih.html"
+                   class="profile-btn"
+                   onclick="playAndGo(event, 'akih.html')">
                     View Profile
                 </a>
 
@@ -353,31 +375,47 @@
         © 2026 NIKEDO | Student Innovation Project
     </footer>
 
+
     <!-- SOUND SCRIPT -->
     <script>
+
         function playSound() {
             const sound = document.getElementById("nikedoSound");
 
             sound.volume = 0.35;
             sound.currentTime = 0;
 
-            sound.play();
+            sound.play().catch(error => {
+                console.log("Sound error:", error);
+            });
         }
 
-       function playAndGo(event, page) {
-    event.preventDefault();
 
-    const sound = document.getElementById("nikedoSound");
+        function playAndGo(event, page) {
+            event.preventDefault();
 
-    sound.volume = 0.35;
-    sound.currentTime = 0;
+            const sound = document.getElementById("nikedoSound");
 
-    sound.play();
+            sound.volume = 0.35;
+            sound.currentTime = 0;
 
-    sound.onended = function() {
-        window.location.href = page;
-    };
-}
+            sound.play()
+                .then(() => {
+
+                    sound.onended = function() {
+                        window.location.href = page;
+                    };
+
+                })
+                .catch(error => {
+
+                    console.log("Sound error:", error);
+
+                    window.location.href = page;
+
+                });
+        }
+
     </script>
 
 </body>
