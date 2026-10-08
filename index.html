@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIKEDO | Innovation of Tomorrow</title>
+    <title>NIKEDO | Home</title>
 
     <style>
         * {
@@ -17,60 +17,10 @@
             font-family: Arial, sans-serif;
             background: #0f0f14;
             color: white;
-            line-height: 1.6;
         }
 
-        /* INTRO SCREEN */
-        .intro {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #0f0f14, #19111c);
-        }
-
-        .intro-content {
-            max-width: 800px;
-        }
-
-        .intro h1 {
-            font-size: 70px;
-            color: #ff5fa2;
-            letter-spacing: 8px;
-            margin-bottom: 15px;
-        }
-
-        .intro h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .intro p {
-            color: #d5d5d5;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .enter-btn {
-            display: inline-block;
-            padding: 14px 30px;
-            background: #ff5fa2;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .enter-btn:hover {
-            transform: scale(1.05);
-            background: #ff78b1;
-        }
-
-        /* HEADER */
-        header {
+        /* NAVIGATION */
+        nav {
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -78,7 +28,7 @@
             border-bottom: 1px solid #292936;
         }
 
-        nav {
+        .nav-container {
             max-width: 1100px;
             margin: auto;
             padding: 18px 25px;
@@ -90,205 +40,150 @@
         .logo {
             color: #ff5fa2;
             font-size: 25px;
-            letter-spacing: 3px;
+            font-weight: bold;
         }
 
-        nav ul {
-            list-style: none;
+        .nav-links {
             display: flex;
             gap: 25px;
+            list-style: none;
         }
 
-        nav ul li a {
+        .nav-links a {
             color: white;
             text-decoration: none;
+            font-size: 15px;
             transition: 0.3s;
         }
 
-        nav ul li a:hover {
+        .nav-links a:hover {
             color: #ff5fa2;
         }
 
-        /* GENERAL SECTIONS */
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 80px 25px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 38px;
-            margin-bottom: 15px;
-            color: #ff5fa2;
-        }
-
-        .section-description {
-            text-align: center;
-            color: #cfcfcf;
-            max-width: 750px;
-            margin: 0 auto 50px;
-        }
-
-        /* ABOUT NIKEDO */
-        .about-box {
-            background: #171720;
-            padding: 35px;
-            border-radius: 18px;
-            border: 1px solid #292936;
-            text-align: center;
-        }
-
-        .about-box h3 {
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .about-box p {
-            color: #d2d2d2;
-        }
-
-        /* MEMBERS */
-        .members {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .member-card {
-            background: #171720;
-            border: 1px solid #292936;
-            border-radius: 18px;
-            padding: 25px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .member-card:hover {
-            transform: translateY(-7px);
-            border-color: #ff5fa2;
-        }
-
-        /* PHOTO PLACEHOLDER */
-        .photo-placeholder {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
-            border-radius: 15px;
-            border: 2px dashed #ff5fa2;
+        /* WELCOME */
+        .welcome {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #ff8abb;
-            font-size: 15px;
-            background: #111118;
+            text-align: center;
+            padding: 30px;
+            background: radial-gradient(circle at center, #211522, #0f0f14 65%);
         }
 
-        .member-card h3 {
-            font-size: 21px;
-            margin-bottom: 5px;
+        .welcome-content {
+            max-width: 750px;
         }
 
-        .position {
+        .welcome h1 {
+            font-size: 70px;
             color: #ff5fa2;
+            margin-bottom: 15px;
+            letter-spacing: 5px;
+        }
+
+        .welcome h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .welcome p {
+            color: #cccccc;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .enter-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #ff5fa2;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
             font-weight: bold;
-            margin-bottom: 15px;
+            transition: 0.3s;
         }
 
-        .member-card p {
-            color: #c8c8c8;
-            font-size: 15px;
+        .enter-btn:hover {
+            background: #ff82b6;
+            transform: translateY(-3px);
         }
 
-        /* INNOVATION */
-        .innovation-box {
-            background: #171720;
-            border: 1px solid #292936;
-            border-radius: 18px;
-            padding: 35px;
+        /* HOME */
+        .home {
+            min-height: 90vh;
+            padding: 100px 25px;
         }
 
-        .innovation-box h3 {
+        .home-container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .home h1 {
+            font-size: 45px;
             color: #ff5fa2;
-            font-size: 27px;
-            margin-bottom: 15px;
-        }
-
-        .innovation-box p {
-            color: #d3d3d3;
             margin-bottom: 20px;
         }
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 30px;
+        .home h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
         }
 
-        .feature {
-            background: #111118;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
+        .home p {
+            max-width: 750px;
+            margin: 0 auto 25px;
+            color: #cccccc;
+            line-height: 1.8;
         }
 
-        .feature h4 {
+        .highlight {
+            margin-top: 50px;
+            padding: 35px;
+            background: #171720;
+            border: 1px solid #2b2b38;
+            border-radius: 18px;
+        }
+
+        .highlight h3 {
             color: #ff5fa2;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 25px;
         }
 
-        .feature p {
-            font-size: 14px;
-            margin: 0;
-        }
-
-        /* FOOTER */
         footer {
             text-align: center;
-            padding: 30px 20px;
+            padding: 25px;
             background: #15151d;
-            border-top: 1px solid #292936;
-            color: #aaa;
-        }
-
-        footer strong {
-            color: #ff5fa2;
+            color: #888;
+            font-size: 14px;
         }
 
         /* MOBILE */
-        @media (max-width: 800px) {
-
-            .intro h1 {
-                font-size: 48px;
-                letter-spacing: 5px;
-            }
-
-            .intro h2 {
-                font-size: 22px;
-            }
-
-            nav {
+        @media (max-width: 700px) {
+            .nav-container {
                 flex-direction: column;
                 gap: 15px;
             }
 
-            nav ul {
+            .nav-links {
                 gap: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            .members {
-                grid-template-columns: 1fr;
+            .welcome h1 {
+                font-size: 50px;
             }
 
-            .features {
-                grid-template-columns: 1fr;
+            .welcome h2 {
+                font-size: 24px;
             }
 
-            .section-title {
-                font-size: 32px;
+            .home h1 {
+                font-size: 35px;
             }
         }
     </style>
@@ -296,190 +191,70 @@
 
 <body>
 
-    <!-- INTRO SCREEN -->
-    <div class="intro" id="home">
-        <div class="intro-content">
+    <!-- WELCOME PAGE -->
+    <section class="welcome">
+        <div class="welcome-content">
             <h1>NIKEDO</h1>
 
-            <h2>Innovating the Laptop of Tomorrow</h2>
+            <h2>Innovation That Moves With You</h2>
 
             <p>
-                Welcome to NIKEDO — a student innovation project
-                exploring how technology can make laptops smarter,
-                safer, and more convenient in the future.
+                Welcome to NIKEDO, a student innovation project focused on
+                creating smart and practical technology for everyday use.
             </p>
 
-            <a href="#about" class="enter-btn">ENTER NIKEDO</a>
+            <a href="#home" class="enter-btn">ENTER NIKEDO</a>
         </div>
-    </div>
+    </section>
 
 
     <!-- NAVIGATION -->
-    <header>
-        <nav>
-            <h1 class="logo">NIKEDO</h1>
+    <nav>
+        <div class="nav-container">
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#members">Members</a></li>
-                <li><a href="#innovation">Innovation</a></li>
+            <div class="logo">NIKEDO</div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
             </ul>
-        </nav>
-    </header>
-
-
-    <!-- ABOUT NIKEDO -->
-    <section id="about">
-
-        <h2 class="section-title">About NIKEDO</h2>
-
-        <p class="section-description">
-            NIKEDO is a student group focused on creating innovative
-            ideas that could improve everyday technology in the future.
-        </p>
-
-        <div class="about-box">
-
-            <h3>Our Vision</h3>
-
-            <p>
-                We imagine a future where technology can understand
-                its surroundings and respond automatically to make
-                everyday tasks easier and more convenient.
-            </p>
 
         </div>
-
-    </section>
-
-
-    <!-- MEMBERS -->
-    <section id="members">
-
-        <h2 class="section-title">Meet the NIKEDO Team</h2>
-
-        <p class="section-description">
-            Meet the students behind the NIKEDO innovation project.
-        </p>
-
-        <div class="members">
-
-            <!-- MEMBER 1 -->
-            <div class="member-card">
-
-                <div class="photo-placeholder">
-                    Picture
-                </div>
-
-                <h3>Mark Ashley A. Quiambao</h3>
-
-                <div class="position">
-                    Leader
-                </div>
-
-                <p>
-                    About Me will be added soon.
-                </p>
-
-            </div>
+    </nav>
 
 
-            <!-- MEMBER 2 -->
-            <div class="member-card">
+    <!-- HOME PAGE -->
+    <section class="home" id="home">
 
-                <div class="photo-placeholder">
-                    Picture
-                </div>
+        <div class="home-container">
 
-                <h3>Gillian Kate L. Lomibao</h3>
+            <h1>Welcome to NIKEDO</h1>
 
-                <div class="position">
-                    Member
-                </div>
+            <h2>Smart Ideas for Everyday Technology</h2>
+
+            <p>
+                NIKEDO is a student innovation project created to explore
+                how technology can make everyday tasks easier, smarter,
+                and more convenient.
+            </p>
+
+            <p>
+                Our project focuses on developing a future laptop concept
+                that can automatically close when the user is no longer
+                detected in front of it.
+            </p>
+
+            <div class="highlight">
+
+                <h3>Our Main Idea</h3>
 
                 <p>
-                    About Me will be added soon.
-                </p>
-
-            </div>
-
-
-            <!-- MEMBER 3 -->
-            <div class="member-card">
-
-                <div class="photo-placeholder">
-                    Picture
-                </div>
-
-                <h3>Mark Angelo Tibar</h3>
-
-                <div class="position">
-                    Member
-                </div>
-
-                <p>
-                    About Me will be added soon.
-                </p>
-
-            </div>
-
-
-            <!-- MEMBER 4 -->
-            <div class="member-card">
-
-                <div class="photo-placeholder">
-                    Picture
-                </div>
-
-                <h3>Maria Suzaine P. Catingcoy</h3>
-
-                <div class="position">
-                    Member
-                </div>
-
-                <p>
-                    About Me will be added soon.
-                </p>
-
-            </div>
-
-
-            <!-- MEMBER 5 -->
-            <div class="member-card">
-
-                <div class="photo-placeholder">
-                    Picture
-                </div>
-
-                <h3>Akih Madija</h3>
-
-                <div class="position">
-                    Member
-                </div>
-
-                <p>
-                    About Me will be added soon.
-                </p>
-
-            </div>
-
-
-            <!-- MEMBER 6 PLACEHOLDER -->
-            <div class="member-card">
-
-                <div class="photo-placeholder">
-                    Picture
-                </div>
-
-                <h3>6th Member</h3>
-
-                <div class="position">
-                    Member
-                </div>
-
-                <p>
-                    About Me will be added soon.
+                    A laptop equipped with a camera or sensor can detect
+                    whether the user is still present. If the user leaves
+                    for one minute, the laptop can automatically close
+                    itself.
                 </p>
 
             </div>
@@ -489,84 +264,8 @@
     </section>
 
 
-    <!-- INNOVATION -->
-    <section id="innovation">
-
-        <h2 class="section-title">Our Innovation</h2>
-
-        <p class="section-description">
-            A concept for a smarter laptop designed for the future.
-        </p>
-
-        <div class="innovation-box">
-
-            <h3>Automatic-Folding Laptop</h3>
-
-            <p>
-                Our innovation is a future laptop that can automatically
-                close or fold itself when the user is no longer present.
-                Unlike regular laptops that need to be manually closed,
-                our concept uses a camera or sensor to detect whether
-                the user is still in front of the laptop.
-            </p>
-
-            <p>
-                If the system detects that the user has been away for
-                one minute, the laptop can automatically close itself.
-                This concept aims to provide convenience and make
-                future laptops smarter and more responsive.
-            </p>
-
-
-            <div class="features">
-
-                <div class="feature">
-                    <h4>📷 Smart Detection</h4>
-
-                    <p>
-                        A camera or sensor detects whether the user
-                        is still present.
-                    </p>
-                </div>
-
-
-                <div class="feature">
-                    <h4>⏱️ 1-Minute Detection</h4>
-
-                    <p>
-                        If the user is away for one minute,
-                        the system activates the folding feature.
-                    </p>
-                </div>
-
-
-                <div class="feature">
-                    <h4>💻 Automatic Folding</h4>
-
-                    <p>
-                        The laptop automatically closes itself
-                        without requiring the user to manually fold it.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
     <footer>
-
-        <p>
-            © 2026 <strong>NIKEDO</strong> | Innovation Project
-        </p>
-
-        <p>
-            Innovating the Laptop of Tomorrow
-        </p>
-
+        © 2026 NIKEDO | Student Innovation Project
     </footer>
 
 </body>
