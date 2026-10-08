@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIKEDO | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f14;
+            color: white;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(21, 21, 29, 0.95);
+            border-bottom: 1px solid #292936;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff5fa2;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-logo {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff5fa2;
+        }
+
+        .home {
+            min-height: 90vh;
+            padding: 100px 25px;
+        }
+
+        .home-container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .home h1 {
+            font-size: 45px;
+            color: #ff5fa2;
+            margin-bottom: 20px;
+        }
+
+        .home h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .home p {
+            max-width: 750px;
+            margin: 0 auto 25px;
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            margin-top: 50px;
+            padding: 35px;
+            background: #171720;
+            border: 1px solid #2b2b38;
+            border-radius: 18px;
+        }
+
+        .highlight h3 {
+            color: #ff5fa2;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #15151d;
+            color: #888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home h1 {
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CLICK SOUND -->
+    <audio id="nikedoSound" preload="auto">
+        <source src="Sound Click.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <div class="logo">
+
+                <img src="Nikedo.jpg"
+                     alt="NIKEDO Logo"
+                     class="nav-logo">
+
+                <span>NIKEDO</span>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="welcome.html"
+                       onclick="playAndGo(event, 'welcome.html')">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html"
+                       onclick="playAndGo(event, 'about.html')">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="members.html"
+                       onclick="playAndGo(event, 'members.html')">
+                        Members
+                    </a>
+                </li>
+
+                <li>
+                    <a href="innovation.html"
+                       onclick="playAndGo(event, 'innovation.html')">
+                        Innovation
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- HOME CONTENT -->
+
+    <section class="home" id="home">
+
+        <div class="home-container">
+
+            <h1>Welcome to NIKEDO</h1>
+
+            <h2>Smart Ideas for Everyday Technology</h2>
+
+            <p>
+                NIKEDO is a student innovation project created to explore
+                how technology can make everyday tasks easier, smarter,
+                and more convenient.
+            </p>
+
+            <p>
+                Our project focuses on developing a future laptop concept
+                that can automatically close when the user is no longer
+                detected in front of it.
+            </p>
+
+            <div class="highlight">
+
+                <h3>Our Main Idea</h3>
+
+                <p>
+                    A laptop equipped with a camera or sensor can detect
+                    whether the user is still present. If the user leaves
+                    for one minute, the laptop can automatically close
+                    itself.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 NIKEDO | Student Innovation Project
+    </footer>
+
+    <script>
+
+        function playAndGo(event, page) {
+
+            event.preventDefault();
+
+            const sound = document.getElementById("nikedoSound");
+
+            sound.volume = 0.35;
+            sound.currentTime = 0;
+
+            sound.play()
+                .then(() => {
+
+                    sound.onended = function() {
+                        window.location.href = page;
+                    };
+
+                })
+                .catch((error) => {
+
+                    console.log("Sound error:", error);
+
+                    window.location.href = page;
+
+                });
+        }
+
+    </script>
+
+</body>
+</html>
