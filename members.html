@@ -18,15 +18,15 @@
             color: white;
         }
 
-        header {
+        nav {
             background: #15151d;
             border-bottom: 1px solid #292936;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
-        nav {
+        .nav-container {
             max-width: 1100px;
             margin: auto;
             padding: 18px 25px;
@@ -38,44 +38,48 @@
         .logo {
             color: #ff5fa2;
             font-size: 25px;
-            letter-spacing: 3px;
+            font-weight: bold;
         }
 
-        nav ul {
-            list-style: none;
+        .nav-links {
             display: flex;
             gap: 25px;
+            list-style: none;
         }
 
-        nav ul li a {
+        .nav-links a {
             color: white;
             text-decoration: none;
+            transition: 0.3s;
         }
 
-        nav ul li a:hover {
+        .nav-links a:hover {
             color: #ff5fa2;
         }
 
-        .page {
-            max-width: 1100px;
-            margin: auto;
+        .members {
+            min-height: 90vh;
             padding: 80px 25px;
         }
 
         .title {
             text-align: center;
-            color: #ff5fa2;
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .description {
-            text-align: center;
-            color: #cfcfcf;
             margin-bottom: 50px;
         }
 
-        .members {
+        .title h1 {
+            font-size: 48px;
+            color: #ff5fa2;
+            margin-bottom: 15px;
+        }
+
+        .title p {
+            color: #aaa;
+        }
+
+        .member-grid {
+            max-width: 1000px;
+            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
@@ -83,7 +87,7 @@
 
         .member-card {
             background: #171720;
-            border: 1px solid #292936;
+            border: 1px solid #2b2b38;
             border-radius: 18px;
             padding: 25px;
             text-align: center;
@@ -91,83 +95,81 @@
         }
 
         .member-card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-5px);
             border-color: #ff5fa2;
         }
 
-        .photo {
-            width: 150px;
-            height: 150px;
+        .profile-picture {
+            width: 130px;
+            height: 130px;
             margin: 0 auto 20px;
-            border: 2px dashed #ff5fa2;
-            border-radius: 15px;
+            border-radius: 50%;
+            border: 3px solid #ff5fa2;
+            background: #252530;
             display: flex;
-            align-items: center;
             justify-content: center;
-            color: #ff8abb;
-            background: #111118;
+            align-items: center;
+            color: #888;
+            font-size: 14px;
         }
 
         .member-card h2 {
             font-size: 20px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .position {
             color: #ff5fa2;
-            font-weight: bold;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
+            font-size: 14px;
         }
 
         .profile-btn {
             display: inline-block;
-            padding: 10px 22px;
+            padding: 10px 20px;
             background: #ff5fa2;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
+            border-radius: 20px;
             font-size: 14px;
+            transition: 0.3s;
         }
 
         .profile-btn:hover {
-            background: #ff78b1;
-        }
-
-        .back {
-            display: block;
-            width: fit-content;
-            margin: 45px auto 0;
-            color: #ff5fa2;
-            text-decoration: none;
+            background: #ff82b6;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 25px;
             background: #15151d;
-            color: #aaa;
-        }
-
-        footer strong {
-            color: #ff5fa2;
+            color: #888;
         }
 
         @media (max-width: 800px) {
+            .member-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
-            nav {
+        @media (max-width: 550px) {
+            .nav-container {
                 flex-direction: column;
                 gap: 15px;
             }
 
-            nav ul {
+            .nav-links {
                 gap: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            .members {
+            .member-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .title h1 {
+                font-size: 38px;
             }
         }
     </style>
@@ -175,48 +177,40 @@
 
 <body>
 
-    <header>
+    <nav>
+        <div class="nav-container">
 
-        <nav>
+            <div class="logo">NIKEDO</div>
 
-            <h1 class="logo">NIKEDO</h1>
-
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="members.html">Members</a></li>
                 <li><a href="innovation.html">Innovation</a></li>
             </ul>
 
-        </nav>
-
-    </header>
-
-
-    <main class="page">
-
-        <h1 class="title">
-            NIKEDO Members
-        </h1>
-
-        <p class="description">
-            Meet the students behind the NIKEDO innovation project.
-            Click a member to learn more about them.
-        </p>
+        </div>
+    </nav>
 
 
-        <div class="members">
+    <section class="members">
 
-            <!-- MARK ASHLEY -->
+        <div class="title">
+            <h1>Our Members</h1>
+            <p>Meet the team behind NIKEDO.</p>
+        </div>
+
+
+        <div class="member-grid">
+
+            <!-- MEMBER 1 -->
             <div class="member-card">
 
-                <div class="photo">
-                    Picture
+                <div class="profile-picture">
+                    PHOTO
                 </div>
 
-                <h2>
-                    Mark Ashley A. Quiambao
-                </h2>
+                <h2>Mark Ashley A. Quiambao</h2>
 
                 <div class="position">
                     Leader
@@ -229,16 +223,14 @@
             </div>
 
 
-            <!-- GILLIAN -->
+            <!-- MEMBER 2 -->
             <div class="member-card">
 
-                <div class="photo">
-                    Picture
+                <div class="profile-picture">
+                    PHOTO
                 </div>
 
-                <h2>
-                    Gillian Kate L. Lomibao
-                </h2>
+                <h2>Gillian Kate L. Lomibao</h2>
 
                 <div class="position">
                     Member
@@ -251,16 +243,14 @@
             </div>
 
 
-            <!-- MARK ANGELO -->
+            <!-- MEMBER 3 -->
             <div class="member-card">
 
-                <div class="photo">
-                    Picture
+                <div class="profile-picture">
+                    PHOTO
                 </div>
 
-                <h2>
-                    Mark Angelo Tibar
-                </h2>
+                <h2>Mark Angelo Tibar</h2>
 
                 <div class="position">
                     Member
@@ -273,16 +263,14 @@
             </div>
 
 
-            <!-- MARIA SUZAINE -->
+            <!-- MEMBER 4 -->
             <div class="member-card">
 
-                <div class="photo">
-                    Picture
+                <div class="profile-picture">
+                    PHOTO
                 </div>
 
-                <h2>
-                    Maria Suzaine P. Catingcoy
-                </h2>
+                <h2>Maria Suzaine P. Catingcoy</h2>
 
                 <div class="position">
                     Member
@@ -295,16 +283,14 @@
             </div>
 
 
-            <!-- AKIH -->
+            <!-- MEMBER 5 -->
             <div class="member-card">
 
-                <div class="photo">
-                    Picture
+                <div class="profile-picture">
+                    PHOTO
                 </div>
 
-                <h2>
-                    Akih Madija
-                </h2>
+                <h2>Akih Madija</h2>
 
                 <div class="position">
                     Member
@@ -316,44 +302,13 @@
 
             </div>
 
-
-            <!-- 6TH MEMBER -->
-            <div class="member-card">
-
-                <div class="photo">
-                    Picture
-                </div>
-
-                <h2>
-                    6th Member
-                </h2>
-
-                <div class="position">
-                    Member
-                </div>
-
-                <a href="member6.html" class="profile-btn">
-                    View Profile
-                </a>
-
-            </div>
-
         </div>
 
-
-        <a href="index.html#home" class="back">
-            ← Back to Home
-        </a>
-
-    </main>
+    </section>
 
 
     <footer>
-
-        <p>
-            © 2026 <strong>NIKEDO</strong> | Innovation Project
-        </p>
-
+        © 2026 NIKEDO | Student Innovation Project
     </footer>
 
 </body>
