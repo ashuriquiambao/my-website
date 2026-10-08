@@ -364,20 +364,20 @@
             sound.play();
         }
 
-        function playAndGo(event, page) {
-            event.preventDefault();
+       function playAndGo(event, page) {
+    event.preventDefault();
 
-            const sound = document.getElementById("nikedoSound");
+    const sound = document.getElementById("nikedoSound");
 
-            sound.volume = 0.35;
-            sound.currentTime = 0;
+    sound.volume = 0.35;
+    sound.currentTime = 0;
 
-            sound.play();
+    sound.play();
 
-            sound.onended = function() {
-                window.location.href = page;
-            };
-        }
+    sound.onended = function() {
+        window.location.href = page;
+    };
+}
     </script>
 
 </body>
