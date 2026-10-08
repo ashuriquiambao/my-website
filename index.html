@@ -457,19 +457,31 @@
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html" onclick="playSound()">Home</a>
+                    <a href="index.html"
+                       onclick="playAndGo(event, 'index.html')">
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="about.html" onclick="playSound()">About</a>
+                    <a href="about.html"
+                       onclick="playAndGo(event, 'about.html')">
+                        About
+                    </a>
                 </li>
 
                 <li>
-                    <a href="members.html" onclick="playSound()">Members</a>
+                    <a href="members.html"
+                       onclick="playAndGo(event, 'members.html')">
+                        Members
+                    </a>
                 </li>
 
                 <li>
-                    <a href="innovation.html" onclick="playSound()">Innovation</a>
+                    <a href="innovation.html"
+                       onclick="playAndGo(event, 'innovation.html')">
+                        Innovation
+                    </a>
                 </li>
 
             </ul>
@@ -531,6 +543,21 @@
             sound.currentTime = 0;
 
             sound.play();
+        }
+
+        function playAndGo(event, page) {
+            event.preventDefault();
+
+            const sound = document.getElementById("nikedoSound");
+
+            sound.volume = 0.35;
+            sound.currentTime = 0;
+
+            sound.play();
+
+            sound.onended = function() {
+                window.location.href = page;
+            };
         }
     </script>
 
