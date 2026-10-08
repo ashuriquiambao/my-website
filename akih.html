@@ -117,14 +117,34 @@
 
 <body>
 
+    <!-- NIKEDO CLICK SOUND -->
+    <audio id="nikedoSound">
+        <source src="Sound Click.mp3" type="audio/mpeg">
+    </audio>
+
     <nav>
         <div class="logo">NIKEDO</div>
 
         <div>
-            <a href="index.html#home">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="members.html">Members</a>
-            <a href="innovation.html">Innovation</a>
+            <a href="index.html#home"
+               onclick="playAndGo(event, 'index.html#home')">
+                Home
+            </a>
+
+            <a href="index.html#about"
+               onclick="playAndGo(event, 'index.html#about')">
+                About
+            </a>
+
+            <a href="members.html"
+               onclick="playAndGo(event, 'members.html')">
+                Members
+            </a>
+
+            <a href="innovation.html"
+               onclick="playAndGo(event, 'innovation.html')">
+                Innovation
+            </a>
         </div>
     </nav>
 
@@ -149,7 +169,11 @@
             </p>
         </div>
 
-        <a href="members.html" class="back">← Back to Members</a>
+        <a href="members.html"
+           class="back"
+           onclick="playAndGo(event, 'members.html')">
+            ← Back to Members
+        </a>
 
     </section>
 
@@ -157,6 +181,22 @@
         © 2026 NIKEDO. All Rights Reserved.
     </footer>
 
+    <script>
+        function playAndGo(event, page) {
+            event.preventDefault();
+
+            const sound = document.getElementById("nikedoSound");
+
+            sound.volume = 0.35;
+            sound.currentTime = 0;
+
+            sound.play();
+
+            sound.onended = function() {
+                window.location.href = page;
+            };
+        }
+    </script>
+
 </body>
 </html>
-```
