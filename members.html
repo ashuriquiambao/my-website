@@ -198,6 +198,11 @@
 
 <body>
 
+    <!-- SOUND -->
+    <audio id="nikedoSound">
+        <source src="Sound Click.mp3" type="audio/mpeg">
+    </audio>
+
     <nav>
         <div class="nav-container">
 
@@ -207,9 +212,9 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" onclick="playSound()">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="members.html">Members</a></li>
+                <li><a href="members.html" onclick="playSound()">Members</a></li>
                 <li><a href="innovation.html">Innovation</a></li>
             </ul>
 
@@ -326,6 +331,18 @@
     <footer>
         © 2026 NIKEDO | Student Innovation Project
     </footer>
+
+    <!-- SOUND SCRIPT -->
+    <script>
+        function playSound() {
+            const sound = document.getElementById("nikedoSound");
+
+            sound.volume = 0.35;
+            sound.currentTime = 0;
+
+            sound.play();
+        }
+    </script>
 
 </body>
 </html>
