@@ -72,7 +72,6 @@
             color: #ff5fa2;
         }
 
-
         /* WELCOME / LANDING PAGE */
 
         .welcome {
@@ -94,8 +93,6 @@
                 );
         }
 
-        /* Background glow */
-
         .welcome::before {
             content: "";
             position: absolute;
@@ -110,8 +107,6 @@
             transform: translateX(-50%);
         }
 
-        /* Old separate circle removed */
-
         .welcome::after {
             display: none;
         }
@@ -121,7 +116,6 @@
             z-index: 2;
             max-width: 800px;
         }
-
 
         /* LOGO + CIRCLE */
 
@@ -138,8 +132,6 @@
 
             animation: logoFloat 4s ease-in-out infinite;
         }
-
-        /* EXACT SAME SIZE AS THE LOGO */
 
         .logo-wrapper::before {
             content: "";
@@ -180,7 +172,6 @@
             z-index: 1;
         }
 
-
         /* LOGO MOVEMENT */
 
         @keyframes logoFloat {
@@ -193,7 +184,6 @@
             }
         }
 
-
         /* SMALL LABEL */
 
         .welcome-label {
@@ -204,7 +194,6 @@
             margin-bottom: 18px;
             text-transform: uppercase;
         }
-
 
         /* MAIN TITLE */
 
@@ -227,7 +216,6 @@
             line-height: 1.8;
             font-size: 17px;
         }
-
 
         /* ENTER BUTTON */
 
@@ -265,7 +253,6 @@
             transform: translateX(5px);
         }
 
-
         /* SCROLL TEXT */
 
         .scroll-text {
@@ -285,7 +272,6 @@
                 transform: translateY(5px);
             }
         }
-
 
         /* HOME */
 
@@ -340,7 +326,6 @@
             font-size: 14px;
         }
 
-
         /* MOBILE */
 
         @media (max-width: 700px) {
@@ -359,8 +344,6 @@
             .welcome {
                 min-height: 100vh;
             }
-
-            /* MOBILE LOGO */
 
             .logo-wrapper {
                 width: 170px;
@@ -400,6 +383,10 @@
 
 <body>
 
+    <!-- BACKGROUND MUSIC -->
+    <audio id="nikedoSound">
+        <source src="EXPLORE NIKEDO.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- WELCOME / LANDING PAGE -->
 
@@ -407,7 +394,7 @@
 
         <div class="welcome-content">
 
-            <!-- LOGO + CIRCLE = ONE UNIT -->
+            <!-- LOGO + CIRCLE -->
 
             <div class="logo-wrapper">
 
@@ -417,17 +404,14 @@
 
             </div>
 
-
             <div class="welcome-label">
                 
             </div>
-
 
             <h1>
                 Innovation That<br>
                 <span>Moves With You</span>
             </h1>
-
 
             <p>
                 Welcome to NIKEDO — a student innovation project focused
@@ -435,12 +419,16 @@
                 for everyday life.
             </p>
 
+            <!-- EXPLORE BUTTON WITH SOUND -->
 
-            <a href="#home" class="enter-btn">
+            <a href="#home"
+               class="enter-btn"
+               onclick="playSound()">
+
                 EXPLORE NIKEDO
                 <span class="arrow">→</span>
-            </a>
 
+            </a>
 
             <div class="scroll-text">
                 SCROLL TO EXPLORE ↓
@@ -449,7 +437,6 @@
         </div>
 
     </section>
-
 
     <!-- NAVIGATION -->
 
@@ -466,7 +453,6 @@
                 <span>NIKEDO</span>
 
             </div>
-
 
             <ul class="nav-links">
 
@@ -492,7 +478,6 @@
 
     </nav>
 
-
     <!-- HOME PAGE -->
 
     <section class="home" id="home">
@@ -515,7 +500,6 @@
                 detected in front of it.
             </p>
 
-
             <div class="highlight">
 
                 <h3>Our Main Idea</h3>
@@ -533,11 +517,22 @@
 
     </section>
 
-
     <footer>
         © 2026 NIKEDO | Student Innovation Project
     </footer>
 
+    <!-- SOUND SCRIPT -->
+
+    <script>
+        function playSound() {
+            const sound = document.getElementById("nikedoSound");
+
+            sound.volume = 0.35;
+            sound.currentTime = 0;
+
+            sound.play();
+        }
+    </script>
 
 </body>
 </html>
