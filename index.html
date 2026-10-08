@@ -110,7 +110,7 @@
             transform: translateX(-50%);
         }
 
-        /* Removed old circle so it will no longer appear on the side */
+        /* Old separate circle removed */
 
         .welcome::after {
             display: none;
@@ -139,13 +139,15 @@
             animation: logoFloat 4s ease-in-out infinite;
         }
 
+        /* EXACT SAME SIZE AS THE LOGO */
+
         .logo-wrapper::before {
             content: "";
 
             position: absolute;
 
-            width: 250px;
-            height: 250px;
+            width: 230px;
+            height: 230px;
 
             border: 1px solid rgba(255, 95, 162, 0.18);
 
@@ -154,6 +156,10 @@
             box-shadow:
                 0 0 50px rgba(255, 95, 162, 0.08),
                 0 0 100px rgba(255, 95, 162, 0.05);
+
+            z-index: 2;
+
+            pointer-events: none;
         }
 
         .welcome-logo {
@@ -169,6 +175,9 @@
             filter:
                 drop-shadow(0 0 15px rgba(255, 95, 162, 0.35))
                 drop-shadow(0 0 35px rgba(255, 95, 162, 0.12));
+
+            position: relative;
+            z-index: 1;
         }
 
 
@@ -226,32 +235,25 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-
             padding: 15px 30px;
 
             background: #ff5fa2;
             color: white;
-
             text-decoration: none;
 
             border-radius: 30px;
-
             font-weight: bold;
             font-size: 15px;
 
-            box-shadow:
-                0 8px 25px rgba(255, 95, 162, 0.25);
+            box-shadow: 0 8px 25px rgba(255, 95, 162, 0.25);
 
             transition: 0.3s;
         }
 
         .enter-btn:hover {
             background: #ff82b6;
-
             transform: translateY(-4px);
-
-            box-shadow:
-                0 12px 30px rgba(255, 95, 162, 0.35);
+            box-shadow: 0 12px 30px rgba(255, 95, 162, 0.35);
         }
 
         .arrow {
@@ -268,14 +270,10 @@
 
         .scroll-text {
             margin-top: 45px;
-
             color: #777;
-
             font-size: 12px;
             letter-spacing: 2px;
-
-            animation:
-                scrollFloat 2s ease-in-out infinite;
+            animation: scrollFloat 2s ease-in-out infinite;
         }
 
         @keyframes scrollFloat {
@@ -323,11 +321,8 @@
         .highlight {
             margin-top: 50px;
             padding: 35px;
-
             background: #171720;
-
             border: 1px solid #2b2b38;
-
             border-radius: 18px;
         }
 
@@ -339,13 +334,9 @@
 
         footer {
             text-align: center;
-
             padding: 25px;
-
             background: #15151d;
-
             color: #888;
-
             font-size: 14px;
         }
 
@@ -369,7 +360,6 @@
                 min-height: 100vh;
             }
 
-
             /* MOBILE LOGO */
 
             .logo-wrapper {
@@ -379,15 +369,14 @@
             }
 
             .logo-wrapper::before {
-                width: 190px;
-                height: 190px;
+                width: 170px;
+                height: 170px;
             }
 
             .welcome-logo {
                 width: 170px;
                 height: 170px;
             }
-
 
             .welcome-label {
                 font-size: 11px;
@@ -418,8 +407,7 @@
 
         <div class="welcome-content">
 
-
-            <!-- LOGO AND CIRCLE ARE NOW ONE UNIT -->
+            <!-- LOGO + CIRCLE = ONE UNIT -->
 
             <div class="logo-wrapper">
 
@@ -449,18 +437,14 @@
 
 
             <a href="#home" class="enter-btn">
-
                 EXPLORE NIKEDO
-
                 <span class="arrow">→</span>
-
             </a>
 
 
             <div class="scroll-text">
                 SCROLL TO EXPLORE ↓
             </div>
-
 
         </div>
 
@@ -472,7 +456,6 @@
     <nav>
 
         <div class="nav-container">
-
 
             <div class="logo">
 
@@ -505,7 +488,6 @@
 
             </ul>
 
-
         </div>
 
     </nav>
@@ -517,23 +499,15 @@
 
         <div class="home-container">
 
+            <h1>Welcome to NIKEDO</h1>
 
-            <h1>
-                Welcome to NIKEDO
-            </h1>
-
-
-            <h2>
-                Smart Ideas for Everyday Technology
-            </h2>
-
+            <h2>Smart Ideas for Everyday Technology</h2>
 
             <p>
                 NIKEDO is a student innovation project created to explore
                 how technology can make everyday tasks easier, smarter,
                 and more convenient.
             </p>
-
 
             <p>
                 Our project focuses on developing a future laptop concept
@@ -544,11 +518,7 @@
 
             <div class="highlight">
 
-
-                <h3>
-                    Our Main Idea
-                </h3>
-
+                <h3>Our Main Idea</h3>
 
                 <p>
                     A laptop equipped with a camera or sensor can detect
@@ -557,9 +527,7 @@
                     itself.
                 </p>
 
-
             </div>
-
 
         </div>
 
