@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>NIKEDO | About</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
             background: #0f0f14;
             color: white;
         }
 
+        /* NAVIGATION */
+
         nav {
             background: #15151d;
             border-bottom: 1px solid #292936;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 18px 25px;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         .logo {
@@ -40,7 +43,7 @@
             align-items: center;
             gap: 10px;
             color: #ff5fa2;
-            font-size: 25px;
+            font-size: 24px;
             font-weight: bold;
         }
 
@@ -51,53 +54,51 @@
             border-radius: 8px;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a {
+        nav a {
             color: white;
             text-decoration: none;
-            transition: 0.3s;
+            margin-left: 25px;
         }
 
-        .nav-links a:hover {
+        nav a:hover {
             color: #ff5fa2;
         }
 
-        .about {
-            min-height: 90vh;
-            padding: 90px 25px;
-        }
+        /* ABOUT HERO */
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .title {
+        .hero {
             text-align: center;
-            margin-bottom: 60px;
+            padding: 80px 20px 50px;
         }
 
-        .title h1 {
-            font-size: 48px;
+        .hero h1 {
             color: #ff5fa2;
+            font-size: 45px;
             margin-bottom: 15px;
         }
 
-        .title p {
-            color: #aaa;
+        .hero p {
+            color: #ccc;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* ABOUT SECTION */
+
+        .section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
         }
 
         .box {
-            background: #171720;
-            border: 1px solid #2b2b38;
-            border-radius: 18px;
-            padding: 35px;
+            background: #15151d;
+            padding: 30px;
+            border-radius: 15px;
             margin-bottom: 25px;
+            border: 1px solid #252530;
         }
 
         .box h2 {
@@ -106,124 +107,231 @@
         }
 
         .box p {
-            color: #cccccc;
+            color: #ddd;
             line-height: 1.8;
         }
 
+        /* FOOTER */
+
         footer {
             text-align: center;
-            padding: 25px;
-            background: #15151d;
+            padding: 30px;
             color: #888;
+            background: #15151d;
         }
 
+        /* MOBILE */
+
         @media (max-width: 700px) {
-            .nav-container {
+
+            nav {
                 flex-direction: column;
                 gap: 15px;
             }
 
-            .nav-links {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
+            nav a {
+                margin-left: 8px;
+                margin-right: 8px;
             }
 
-            .title h1 {
-                font-size: 38px;
+            .hero h1 {
+                font-size: 35px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- SOUND -->
+
+    <!-- CLICK SOUND -->
+
     <audio id="nikedoSound">
-        <source src="Sound Click.mp3" type="audio/mpeg">
+
+        <source src="Sound Click.mp3"
+                type="audio/mpeg">
+
     </audio>
 
+
+    <!-- NAVIGATION -->
+
     <nav>
-        <div class="nav-container">
 
-            <div class="logo">
-                <img src="Nikedo.jpg" alt="NIKEDO Logo" class="nav-logo">
-                <span>NIKEDO</span>
-            </div>
+        <div class="logo">
 
-            <ul class="nav-links">
-                <li><a href="index.html" onclick="playSound()">Home</a></li>
-                <li><a href="about.html" onclick="playSound()">About</a></li>
-                <li><a href="members.html">Members</a></li>
-                <li><a href="innovation.html">Innovation</a></li>
-            </ul>
+            <img src="Nikedo.jpg"
+                 alt="NIKEDO Logo"
+                 class="nav-logo">
+
+            <span>NIKEDO</span>
 
         </div>
+
+
+        <div>
+
+            <a href="index.html"
+               onclick="playAndGo(event, 'index.html')">
+                Home
+            </a>
+
+            <a href="about.html"
+               onclick="playAndGo(event, 'about.html')">
+                About
+            </a>
+
+            <a href="members.html"
+               onclick="playAndGo(event, 'members.html')">
+                Members
+            </a>
+
+            <a href="innovation.html"
+               onclick="playAndGo(event, 'innovation.html')">
+                Innovation
+            </a>
+
+        </div>
+
     </nav>
 
 
-    <section class="about">
+    <!-- HERO -->
 
-        <div class="container">
+    <section class="hero">
 
-            <div class="title">
-                <h1>About NIKEDO</h1>
-                <p>Learn more about our group and our purpose.</p>
-            </div>
+        <h1>About NIKEDO</h1>
 
-            <div class="box">
-                <h2>Who We Are</h2>
-
-                <p>
-                    NIKEDO is a student innovation group created to develop
-                    a practical and creative technology idea. Our goal is to
-                    explore how technology can help make everyday activities
-                    easier, safer, and more convenient.
-                </p>
-            </div>
-
-            <div class="box">
-                <h2>Our Purpose</h2>
-
-                <p>
-                    Our project aims to combine creativity and technology
-                    to create an innovative laptop concept. We want to show
-                    how simple automated features can improve the way people
-                    use technology in their daily lives.
-                </p>
-            </div>
-
-            <div class="box">
-                <h2>Why We Created NIKEDO</h2>
-
-                <p>
-                    We created NIKEDO as part of our student innovation
-                    project. Through this project, we can apply what we
-                    have learned in ICT while developing an idea that can
-                    potentially be improved and developed in the future.
-                </p>
-            </div>
-
-        </div>
+        <p>
+            NIKEDO is a student innovation project focused on creating
+            smart, practical, and convenient technology for everyday life.
+        </p>
 
     </section>
 
 
+    <!-- ABOUT CONTENT -->
+
+    <section class="section">
+
+
+        <div class="box">
+
+            <h2>💡 What is NIKEDO?</h2>
+
+            <p>
+                NIKEDO is an innovative student project that explores
+                how technology can be used to create useful solutions
+                for everyday problems. Our main concept is a laptop
+                that can automatically close when the user is no longer
+                present in front of the device.
+            </p>
+
+        </div>
+
+
+        <div class="box">
+
+            <h2>🎯 Our Purpose</h2>
+
+            <p>
+                The purpose of NIKEDO is to develop a creative technology
+                concept that combines convenience, automation, and
+                user awareness. Through this project, we aim to show
+                how simple technology can be developed into a useful
+                and practical innovation.
+            </p>
+
+        </div>
+
+
+        <div class="box">
+
+            <h2>🚀 Our Vision</h2>
+
+            <p>
+                Our vision is to create innovative ideas that can make
+                technology more convenient and helpful in everyday life.
+                NIKEDO represents our goal of combining creativity,
+                technology, and practical solutions.
+            </p>
+
+        </div>
+
+
+        <div class="box">
+
+            <h2>✨ Why NIKEDO?</h2>
+
+            <p>
+                NIKEDO was created to demonstrate how students can use
+                technology and creativity to develop new ideas. The
+                project encourages innovation and problem-solving while
+                exploring how automation can improve the way people
+                interact with technology.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- FOOTER -->
+
     <footer>
-        © 2026 NIKEDO | Student Innovation Project
+
+        © 2026 NIKEDO. All Rights Reserved.
+
     </footer>
 
+
     <!-- SOUND SCRIPT -->
+
     <script>
+
         function playSound() {
-            const sound = document.getElementById("nikedoSound");
+
+            const sound =
+                document.getElementById("nikedoSound");
 
             sound.volume = 0.35;
+
             sound.currentTime = 0;
 
             sound.play();
+
         }
+
+
+        function playAndGo(event, page) {
+
+            event.preventDefault();
+
+            const sound =
+                document.getElementById("nikedoSound");
+
+            sound.volume = 0.35;
+
+            sound.currentTime = 0;
+
+            sound.play();
+
+            sound.onended = function() {
+
+                window.location.href = page;
+
+            };
+
+        }
+
     </script>
 
+
 </body>
+
 </html>
