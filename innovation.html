@@ -170,6 +170,10 @@
 
 <body>
 
+    <audio id="nikedoSound">
+        <source src="Sound Click.mp3" type="audio/mpeg">
+    </audio>
+
     <nav>
 
         <div class="logo">
@@ -178,10 +182,10 @@
         </div>
 
         <div>
-            <a href="index.html">Home</a>
+            <a href="index.html" onclick="playSound()">Home</a>
             <a href="about.html">About</a>
             <a href="members.html">Members</a>
-            <a href="innovation.html">Innovation</a>
+            <a href="innovation.html" onclick="playSound()">Innovation</a>
         </div>
 
     </nav>
@@ -335,7 +339,7 @@
         </div>
 
 
-        <a href="index.html" class="back">
+        <a href="index.html" class="back" onclick="playSound()">
             ← Back to Home
         </a>
 
@@ -345,6 +349,18 @@
     <footer>
         © 2026 NIKEDO. All Rights Reserved.
     </footer>
+
+
+    <script>
+        function playSound() {
+            const sound = document.getElementById("nikedoSound");
+
+            sound.volume = 0.35;
+            sound.currentTime = 0;
+
+            sound.play();
+        }
+    </script>
 
 </body>
 </html>
