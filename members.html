@@ -35,13 +35,32 @@
             align-items: center;
         }
 
+        /* =========================
+           CLICKABLE NIKEDO LOGO
+        ========================= */
+
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
+
             color: #ff5fa2;
             font-size: 25px;
             font-weight: bold;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo:hover span {
+            color: #ff82b6;
         }
 
         .nav-logo {
@@ -50,6 +69,10 @@
             object-fit: contain;
             border-radius: 8px;
         }
+
+        /* =========================
+           NAVIGATION LINKS
+        ========================= */
 
         .nav-links {
             display: flex;
@@ -66,6 +89,10 @@
         .nav-links a:hover {
             color: #ff5fa2;
         }
+
+        /* =========================
+           MEMBERS SECTION
+        ========================= */
 
         .members {
             min-height: 90vh;
@@ -124,6 +151,7 @@
         }
 
         /* Member image size */
+
         .picture {
             width: 130px;
             height: 130px;
@@ -160,6 +188,10 @@
             background: #ff82b6;
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             text-align: center;
             padding: 25px;
@@ -167,13 +199,19 @@
             color: #888;
         }
 
+        /* =========================
+           MOBILE
+        ========================= */
+
         @media (max-width: 800px) {
+
             .member-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 550px) {
+
             .nav-container {
                 flex-direction: column;
                 gap: 15px;
@@ -198,24 +236,46 @@
 
 <body>
 
-    <!-- SOUND -->
+    <!-- =========================
+         SOUND
+    ========================= -->
+
     <audio id="nikedoSound" preload="auto">
         <source src="Sound Click.mp3" type="audio/mpeg">
     </audio>
 
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
     <nav>
+
         <div class="nav-container">
 
-            <div class="logo">
-                <img src="Nikedo.jpg" alt="NIKEDO Logo" class="nav-logo">
+
+            <!-- CLICKABLE NIKEDO LOGO -->
+
+            <a href="index.html"
+               class="logo"
+               onclick="playAndGo(event, 'index.html')">
+
+                <img src="Nikedo.jpg"
+                     alt="NIKEDO Logo"
+                     class="nav-logo">
+
                 <span>NIKEDO</span>
-            </div>
+
+            </a>
+
+
+            <!-- NAVIGATION LINKS -->
 
             <ul class="nav-links">
 
                 <li>
-                    <a href="index.html"
-                       onclick="playAndGo(event, 'index.html')">
+                    <a href="welcome.html"
+                       onclick="playAndGo(event, 'welcome.html')">
                         Home
                     </a>
                 </li>
@@ -244,27 +304,45 @@
             </ul>
 
         </div>
+
     </nav>
 
+
+    <!-- =========================
+         MEMBERS
+    ========================= -->
 
     <section class="members">
 
         <div class="title">
-            <h1>Our Members</h1>
-            <p>Meet the team behind NIKEDO.</p>
+
+            <h1>
+                Our Members
+            </h1>
+
+            <p>
+                Meet the team behind NIKEDO.
+            </p>
+
         </div>
 
 
         <div class="member-grid">
 
-            <!-- MEMBER 1 -->
+
+            <!-- =========================
+                 MEMBER 1
+            ========================= -->
+
             <div class="member-card">
 
                 <img src="mark-ashley.jpg"
                      alt="Mark Ashley A. Quiambao"
                      class="picture">
 
-                <h2>Mark Ashley A. Quiambao</h2>
+                <h2>
+                    Mark Ashley A. Quiambao
+                </h2>
 
                 <div class="position">
                     Inventor
@@ -273,20 +351,27 @@
                 <a href="mark-ashley.html"
                    class="profile-btn"
                    onclick="playAndGo(event, 'mark-ashley.html')">
+
                     View Profile
+
                 </a>
 
             </div>
 
 
-            <!-- MEMBER 2 -->
+            <!-- =========================
+                 MEMBER 2
+            ========================= -->
+
             <div class="member-card">
 
                 <img src="gillian.jpg"
                      alt="Gillian Kate L. Lomibao"
                      class="picture">
 
-                <h2>Gillian Kate L. Lomibao</h2>
+                <h2>
+                    Gillian Kate L. Lomibao
+                </h2>
 
                 <div class="position">
                     Leader
@@ -295,20 +380,27 @@
                 <a href="gillian.html"
                    class="profile-btn"
                    onclick="playAndGo(event, 'gillian.html')">
+
                     View Profile
+
                 </a>
 
             </div>
 
 
-            <!-- MEMBER 3 -->
+            <!-- =========================
+                 MEMBER 3
+            ========================= -->
+
             <div class="member-card">
 
                 <img src="mark-angelo.jpg"
                      alt="Mark Angelo Tibar"
                      class="picture">
 
-                <h2>Mark Angelo Tibar</h2>
+                <h2>
+                    Mark Angelo Tibar
+                </h2>
 
                 <div class="position">
                     Member
@@ -317,20 +409,27 @@
                 <a href="mark-angelo.html"
                    class="profile-btn"
                    onclick="playAndGo(event, 'mark-angelo.html')">
+
                     View Profile
+
                 </a>
 
             </div>
 
 
-            <!-- MEMBER 4 -->
+            <!-- =========================
+                 MEMBER 4
+            ========================= -->
+
             <div class="member-card">
 
                 <div class="profile-picture">
                     PHOTO
                 </div>
 
-                <h2>Maria Suzaine P. Catingcoy</h2>
+                <h2>
+                    Maria Suzaine P. Catingcoy
+                </h2>
 
                 <div class="position">
                     Member
@@ -339,20 +438,27 @@
                 <a href="maria.html"
                    class="profile-btn"
                    onclick="playAndGo(event, 'maria.html')">
+
                     View Profile
+
                 </a>
 
             </div>
 
 
-            <!-- MEMBER 5 -->
+            <!-- =========================
+                 MEMBER 5
+            ========================= -->
+
             <div class="member-card">
 
                 <img src="akih.jpg"
                      alt="Akih Madija"
                      class="picture">
 
-                <h2>Akih Madija</h2>
+                <h2>
+                    Akih Madija
+                </h2>
 
                 <div class="position">
                     Member
@@ -361,7 +467,9 @@
                 <a href="akih.html"
                    class="profile-btn"
                    onclick="playAndGo(event, 'akih.html')">
+
                     View Profile
+
                 </a>
 
             </div>
@@ -371,42 +479,43 @@
     </section>
 
 
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
         © 2026 NIKEDO | Student Innovation Project
     </footer>
 
 
-    <!-- SOUND SCRIPT -->
+    <!-- =========================
+         SOUND SCRIPT
+    ========================= -->
+
     <script>
 
-        function playSound() {
-            const sound = document.getElementById("nikedoSound");
-
-            sound.volume = 0.35;
-            sound.currentTime = 0;
-
-            sound.play().catch(error => {
-                console.log("Sound error:", error);
-            });
-        }
-
-
         function playAndGo(event, page) {
+
             event.preventDefault();
 
             const sound = document.getElementById("nikedoSound");
 
             sound.volume = 0.35;
+
             sound.currentTime = 0;
 
             sound.play()
+
                 .then(() => {
 
                     sound.onended = function() {
+
                         window.location.href = page;
+
                     };
 
                 })
+
                 .catch(error => {
 
                     console.log("Sound error:", error);
@@ -414,6 +523,7 @@
                     window.location.href = page;
 
                 });
+
         }
 
     </script>
