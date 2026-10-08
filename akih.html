@@ -118,7 +118,7 @@
 <body>
 
     <!-- NIKEDO CLICK SOUND -->
-    <audio id="nikedoSound">
+    <audio id="nikedoSound" preload="auto">
         <source src="Sound Click.mp3" type="audio/mpeg">
     </audio>
 
@@ -190,11 +190,16 @@
             sound.volume = 0.35;
             sound.currentTime = 0;
 
-            sound.play();
-
-            sound.onended = function() {
-                window.location.href = page;
-            };
+            sound.play()
+                .then(() => {
+                    sound.onended = function() {
+                        window.location.href = page;
+                    };
+                })
+                .catch((error) => {
+                    console.log("Sound error:", error);
+                    window.location.href = page;
+                });
         }
     </script>
 
