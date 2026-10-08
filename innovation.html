@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>NIKEDO Innovation</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -19,141 +24,257 @@
             color: white;
         }
 
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav {
             background: #15151d;
+
             border-bottom: 1px solid #292936;
+
             padding: 18px 8%;
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             position: sticky;
+
             top: 0;
+
             z-index: 10;
         }
 
+
+        /* CLICKABLE LOGO */
+
         .logo {
             display: flex;
+
             align-items: center;
+
             gap: 10px;
+
             color: #ff5fa2;
+
             font-size: 24px;
+
             font-weight: bold;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition: 0.3s;
         }
+
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+
+        .logo:hover span {
+            color: #ff82b6;
+        }
+
 
         .nav-logo {
             width: 42px;
+
             height: 42px;
+
             object-fit: contain;
+
             border-radius: 8px;
         }
 
+
+        /* NAVIGATION LINKS */
+
         nav a {
             color: white;
+
             text-decoration: none;
+
             margin-left: 25px;
+
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #ff5fa2;
         }
 
+
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
             text-align: center;
+
             padding: 80px 20px 50px;
         }
 
         .hero h1 {
             color: #ff5fa2;
+
             font-size: 45px;
+
             margin-bottom: 15px;
         }
 
         .hero p {
             color: #ccc;
+
             max-width: 700px;
+
             margin: auto;
+
             line-height: 1.7;
+
             font-size: 18px;
         }
 
+
+        /* =========================
+           SECTION
+        ========================= */
+
         .section {
             max-width: 1000px;
+
             margin: 30px auto;
+
             padding: 20px;
         }
 
+
+        /* =========================
+           BOX
+        ========================= */
+
         .box {
             background: #15151d;
+
             padding: 30px;
+
             border-radius: 15px;
+
             margin-bottom: 25px;
+
             border: 1px solid #252530;
         }
 
         .box h2 {
             color: #ff5fa2;
+
             margin-bottom: 15px;
         }
 
         .box p {
             color: #ddd;
+
             line-height: 1.8;
         }
 
+
+        /* =========================
+           STEPS
+        ========================= */
+
         .steps {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 20px;
+
             margin-top: 20px;
         }
 
         .step {
             background: #1b1b24;
+
             padding: 25px;
+
             border-radius: 12px;
         }
 
         .step h3 {
             color: #ff5fa2;
+
             margin-bottom: 10px;
         }
 
         .step p {
             color: #ccc;
+
             line-height: 1.6;
         }
 
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
         .back {
             display: inline-block;
+
             margin: 20px 0 50px;
+
             padding: 12px 22px;
+
             background: #ff5fa2;
+
             color: white;
+
             text-decoration: none;
+
             border-radius: 8px;
+
             font-weight: bold;
+
+            transition: 0.3s;
         }
 
         .back:hover {
             background: #ff3f91;
         }
 
+
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             text-align: center;
+
             padding: 30px;
+
             color: #888;
+
             background: #15151d;
         }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
             nav {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav a {
                 margin-left: 8px;
+
                 margin-right: 8px;
             }
 
@@ -164,36 +285,100 @@
             .steps {
                 grid-template-columns: 1fr;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <audio id="nikedoSound">
-        <source src="Sound Click.mp3" type="audio/mpeg">
+
+    <!-- =========================
+         CLICK SOUND
+    ========================= -->
+
+    <audio id="nikedoSound" preload="auto">
+
+        <source src="Sound Click.mp3"
+                type="audio/mpeg">
+
     </audio>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <nav>
 
-        <div class="logo">
-            <img src="Nikedo.jpg" alt="NIKEDO Logo" class="nav-logo">
+
+        <!-- CLICKABLE NIKEDO LOGO -->
+
+        <a href="index.html"
+           class="logo"
+           onclick="playAndGo(event, 'index.html')">
+
+            <img src="Nikedo.jpg"
+                 alt="NIKEDO Logo"
+                 class="nav-logo">
+
             <span>NIKEDO</span>
-        </div>
+
+        </a>
+
+
+        <!-- NAVIGATION LINKS -->
 
         <div>
-            <a href="index.html" onclick="playAndGo(event, 'index.html')">Home</a>
-            <a href="about.html" onclick="playAndGo(event, 'about.html')">About</a>
-            <a href="members.html" onclick="playAndGo(event, 'members.html')">Members</a>
-            <a href="innovation.html" onclick="playAndGo(event, 'innovation.html')">Innovation</a>
+
+            <a href="welcome.html"
+               onclick="playAndGo(event, 'welcome.html')">
+
+                Home
+
+            </a>
+
+
+            <a href="about.html"
+               onclick="playAndGo(event, 'about.html')">
+
+                About
+
+            </a>
+
+
+            <a href="members.html"
+               onclick="playAndGo(event, 'members.html')">
+
+                Members
+
+            </a>
+
+
+            <a href="innovation.html"
+               onclick="playAndGo(event, 'innovation.html')">
+
+                Innovation
+
+            </a>
+
         </div>
 
     </nav>
 
 
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <section class="hero">
 
-        <h1>Our Innovation</h1>
+        <h1>
+            Our Innovation
+        </h1>
 
         <p>
             NIKEDO presents a future laptop designed to automatically
@@ -203,11 +388,20 @@
     </section>
 
 
+    <!-- =========================
+         INNOVATION CONTENT
+    ========================= -->
+
     <section class="section">
+
+
+        <!-- NIKEDO LAPTOP -->
 
         <div class="box">
 
-            <h2>💻 NIKEDO Self-Closing Laptop</h2>
+            <h2>
+                💻 NIKEDO Self-Closing Laptop
+            </h2>
 
             <p>
                 NIKEDO is an innovative laptop concept designed to help
@@ -219,9 +413,13 @@
         </div>
 
 
+        <!-- PURPOSE -->
+
         <div class="box">
 
-            <h2>🎯 Purpose of the Innovation</h2>
+            <h2>
+                🎯 Purpose of the Innovation
+            </h2>
 
             <p>
                 The main purpose of NIKEDO is to create a laptop that
@@ -233,15 +431,24 @@
         </div>
 
 
+        <!-- HOW IT WORKS -->
+
         <div class="box">
 
-            <h2>⚙️ How It Works</h2>
+            <h2>
+                ⚙️ How It Works
+            </h2>
 
             <div class="steps">
 
+
+                <!-- STEP 1 -->
+
                 <div class="step">
 
-                    <h3>1. User Detection</h3>
+                    <h3>
+                        1. User Detection
+                    </h3>
 
                     <p>
                         A camera or sensor detects whether the user is
@@ -251,9 +458,13 @@
                 </div>
 
 
+                <!-- STEP 2 -->
+
                 <div class="step">
 
-                    <h3>2. One-Minute Timer</h3>
+                    <h3>
+                        2. One-Minute Timer
+                    </h3>
 
                     <p>
                         If the system detects that the user has left,
@@ -263,9 +474,13 @@
                 </div>
 
 
+                <!-- STEP 3 -->
+
                 <div class="step">
 
-                    <h3>3. Automatic Closing</h3>
+                    <h3>
+                        3. Automatic Closing
+                    </h3>
 
                     <p>
                         If the user does not return after one minute,
@@ -276,9 +491,13 @@
                 </div>
 
 
+                <!-- STEP 4 -->
+
                 <div class="step">
 
-                    <h3>4. User Returns</h3>
+                    <h3>
+                        4. User Returns
+                    </h3>
 
                     <p>
                         If the user returns before the timer finishes,
@@ -292,27 +511,40 @@
         </div>
 
 
+        <!-- BENEFITS -->
+
         <div class="box">
 
-            <h2>💡 Benefits</h2>
+            <h2>
+                💡 Benefits
+            </h2>
 
             <p>
-                • Helps prevent the laptop from being left open.<br><br>
 
-                • Provides a convenient automatic closing feature.<br><br>
+                • Helps prevent the laptop from being left open.
+                <br><br>
 
-                • Can help improve user awareness and device care.<br><br>
+                • Provides a convenient automatic closing feature.
+                <br><br>
+
+                • Can help improve user awareness and device care.
+                <br><br>
 
                 • Introduces a creative combination of sensors and
                 automatic movement technology.
+
             </p>
 
         </div>
 
 
+        <!-- PROTOTYPE -->
+
         <div class="box">
 
-            <h2>📦 Prototype</h2>
+            <h2>
+                📦 Prototype
+            </h2>
 
             <p>
                 For our prototype, we can create a physical model of
@@ -325,9 +557,13 @@
         </div>
 
 
+        <!-- FUTURE DEVELOPMENT -->
+
         <div class="box">
 
-            <h2>🚀 Future Development</h2>
+            <h2>
+                🚀 Future Development
+            </h2>
 
             <p>
                 In the future, the NIKEDO concept could be improved by
@@ -339,43 +575,73 @@
         </div>
 
 
-        <a href="index.html" class="back" onclick="playAndGo(event, 'index.html')">
+        <!-- BACK BUTTON -->
+
+        <a href="welcome.html"
+           class="back"
+           onclick="playAndGo(event, 'welcome.html')">
+
             ← Back to Home
+
         </a>
+
 
     </section>
 
 
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer>
+
         © 2026 NIKEDO. All Rights Reserved.
+
     </footer>
 
 
+    <!-- =========================
+         SOUND SCRIPT
+    ========================= -->
+
     <script>
-        function playSound() {
-            const sound = document.getElementById("nikedoSound");
-
-            sound.volume = 0.35;
-            sound.currentTime = 0;
-
-            sound.play();
-        }
 
         function playAndGo(event, page) {
-    event.preventDefault();
 
-    const sound = document.getElementById("nikedoSound");
+            event.preventDefault();
 
-    sound.volume = 0.35;
-    sound.currentTime = 0;
+            const sound =
+                document.getElementById("nikedoSound");
 
-    sound.play();
+            sound.volume = 0.35;
 
-    sound.onended = function() {
-        window.location.href = page;
-    };
-}
+            sound.currentTime = 0;
+
+            sound.play()
+
+                .then(() => {
+
+                    sound.onended = function() {
+
+                        window.location.href = page;
+
+                    };
+
+                })
+
+                .catch(error => {
+
+                    console.log("Sound error:", error);
+
+                    window.location.href = page;
+
+                });
+
+        }
+
     </script>
 
+
 </body>
+
 </html>
